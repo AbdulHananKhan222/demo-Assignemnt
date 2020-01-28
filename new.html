@@ -1,0 +1,85 @@
+<html><head>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-aria.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-messages.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+   <script src="https://unpkg.com/@uirouter/angularjs@1.0.19/release/angular-ui-router.min.js"></script>
+   
+   <script src="https://kendo.cdn.telerik.com/2020.1.114/js/angular.min.js"></script>
+   
+   
+   <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.default.min.css" rel="stylesheet" />
+    
+    <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
+   <script type="text/javascript">    </script>
+   
+   <script src="script.js"></script>
+   
+   
+  </head>
+  <body ng-app ="Demo">
+  <div ng-controller="Bas" layout="row" style="height: 500px;" ng-cloak>
+    
+
+    <section  flex>
+  
+      <md-sidenav flex class="md-sidenav-left" md-component-id="left"
+                  md-disable-backdrop="" md-whiteframe="4" >
+  
+        <md-toolbar class="md-theme-indigo">
+          <div layout="row" layout-align="end end">
+          <md-button ng-click="toggleLeft()" class="md-accent" >
+            <md-icon   md-svg-icon="close.svg"></md-icon></div>
+          </md-button>
+          <h1 class="md-toolbar-tools" layout="row" layout-align="center center">Menu </h1>
+          
+           
+          
+            </md-button>
+            
+        </md-toolbar>
+  
+        <md-content layout-margin="">
+          <div layout="column" layout-align="center center">
+          <md-button  ng-controller = "Main" ng-click="home()" class="md-raised md-primary">
+          Home<br>
+        </md-button><md-button ng-controller = "MainCtrl" ng-click="adduser()" class="md-raised md-primary">
+          Add User<br>
+        </md-button><md-button  ng-controller = "MainController" ng-click="listuser()" class="md-raised md-primary">
+          List<br>
+        </md-button></div>
+          
+        </md-content>
+  
+      </md-sidenav>
+  
+      <md-content flex layout-padding>
+  
+        <div layout="column" layout-align="top center">
+         
+  
+          <div>
+            
+            <md-button ng-click="toggleLeft()" class="md-raised">
+              Main-Menu
+            </md-button>
+            
+          </div>
+  <div ui-view></div>
+        </div>
+  
+      </md-content>
+  
+    </section>
+   
+  </div>
+  
+  </body>
+
+
+</html>
